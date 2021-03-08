@@ -47,9 +47,12 @@ func player_won(which_player):
 		player = "Circle"
 	else:
 		player = "Cross"
-	print("{player} won the game!".format({"player": player}))
+	
+	# Prevent other buttons from being pressed
+	GameStatus.is_game_playing = false
+	
 
-# Catches signal from button
+# Catches signal from a button press
 func _on_button_pressed(btn: Square):
 	var is_winner = check_if_winner()
 	if is_winner:

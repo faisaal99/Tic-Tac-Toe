@@ -20,7 +20,7 @@ func _ready():
 	pass
 
 func _gui_input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("click") and GameStatus.is_game_playing:
 		var should_emit = change_status()
 		
 		if should_emit:
