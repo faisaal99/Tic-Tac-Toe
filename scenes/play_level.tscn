@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/play_logic.gd" type="Script" id=1]
 [ext_resource path="res://tiktaktoe_grid.png" type="Texture" id=2]
@@ -32,6 +32,71 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade_replay_menu"
+tracks/0/type = "value"
+tracks/0/path = NodePath("UIGameEnd:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("UIGameEnd:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CenterContainer/GridContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CenterContainer/GridContainer:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "clear_all"
+} ]
 }
 
 [node name="PlayLevel" type="Control"]
@@ -148,6 +213,7 @@ visible = false
 
 [node name="AnimPlayer" type="AnimationPlayer" parent="."]
 anims/fade_menu = SubResource( 1 )
+anims/fade_replay_menu = SubResource( 2 )
 script = ExtResource( 5 )
 [connection signal="signal_end_game" from="." to="UIGameEnd" method="_on_end_game"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square1" to="." method="_on_button_pressed"]
@@ -160,4 +226,5 @@ script = ExtResource( 5 )
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square8" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square9" to="." method="_on_button_pressed"]
 [connection signal="play_enabled" from="UI_Play" to="AnimPlayer" method="_on_UI_Play_play_enabled"]
+[connection signal="on_replay_pressed" from="UIGameEnd" to="AnimPlayer" method="_on_replay_pressed"]
 [connection signal="animation_finished" from="AnimPlayer" to="UI_Play" method="_animation_finished"]

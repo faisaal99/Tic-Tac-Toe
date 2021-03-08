@@ -62,6 +62,14 @@ func _on_button_pressed(btn: Square):
 	if is_winner:
 		player_won(btn.fill_status)
 
+# Clear all squares for new game
+func clear_all():
+	var btns = $"CenterContainer/GridContainer".get_children()
+	for btn in btns:
+		btn.reset_square()
+	
+	GameStatus.is_game_playing = true
+
 func first_row_check() -> bool:
 	var fr: Array = [
 		get_node(first_row[0]) as Square,

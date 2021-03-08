@@ -26,6 +26,10 @@ func _gui_input(event):
 		if should_emit:
 			emit_signal("button_pressed", self)
 
+func reset_square():
+	fill_status = SquareStatus.EMPTY
+	tex.texture = null
+
 # Return true if it does change
 # Return false if it doesn't change
 func change_status() -> bool:

@@ -24,6 +24,7 @@ func _on_end_game(player):
 		win_message.bbcode_text = _draw_text
 	
 	visible = true
+	modulate = Color.white
 
 func _on_replay_pressed():
 	emit_signal("on_replay_pressed")
