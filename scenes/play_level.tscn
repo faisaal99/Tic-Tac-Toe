@@ -1,33 +1,34 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/play_logic.gd" type="Script" id=1]
 [ext_resource path="res://tiktaktoe_grid.png" type="Texture" id=2]
 [ext_resource path="res://assets/square.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/ui_play.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/animation.gd" type="Script" id=5]
+[ext_resource path="res://scenes/ui_game_end.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_menu"
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath("UI_Play:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:visible")
+tracks/1/path = NodePath("UI_Play:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -142,9 +143,13 @@ button_id = 9
 
 [node name="UI_Play" parent="." instance=ExtResource( 4 )]
 
-[node name="AnimPlayer" type="AnimationPlayer" parent="UI_Play"]
+[node name="UIGameEnd" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
 anims/fade_menu = SubResource( 1 )
 script = ExtResource( 5 )
+[connection signal="signal_end_game" from="." to="UIGameEnd" method="_on_end_game"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square1" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square2" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square3" to="." method="_on_button_pressed"]
@@ -154,5 +159,5 @@ script = ExtResource( 5 )
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square7" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square8" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square9" to="." method="_on_button_pressed"]
-[connection signal="play_enabled" from="UI_Play" to="UI_Play/AnimPlayer" method="_on_UI_Play_play_enabled"]
-[connection signal="animation_finished" from="UI_Play/AnimPlayer" to="UI_Play" method="_animation_finished"]
+[connection signal="play_enabled" from="UI_Play" to="AnimPlayer" method="_on_UI_Play_play_enabled"]
+[connection signal="animation_finished" from="AnimPlayer" to="UI_Play" method="_animation_finished"]

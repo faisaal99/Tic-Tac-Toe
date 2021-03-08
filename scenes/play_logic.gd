@@ -17,11 +17,10 @@ export(Array, NodePath) var third_column = []
 export(Array, NodePath) var forw_diagonal = []
 export(Array, NodePath) var back_diagonal = []
 
+# Props
 var _circles = 0
 var _crosses = 0
-
-# Nodes
-onready var ui_game_end = preload("res://scenes/ui_game_end.tscn").instance()
+signal signal_end_game(player)
 
 # Check all rows, columns and diagonals
 # to determine if someone won
@@ -55,7 +54,7 @@ func player_won(which_player):
 	# Prevent other buttons from being pressed
 	GameStatus.is_game_playing = false
 	
-	add_child(ui_game_end)
+	emit_signal("signal_end_game", player)
 
 # Catches signal from a button press
 func _on_button_pressed(btn: Square):

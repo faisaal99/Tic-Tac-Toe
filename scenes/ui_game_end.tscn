@@ -56,3 +56,4 @@ margin_bottom = 225.0
 custom_fonts/font = SubResource( 2 )
 text = "REPLAY"
 flat = true
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton" to="." method="_on_replay_pressed"]
