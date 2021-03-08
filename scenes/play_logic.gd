@@ -20,7 +20,8 @@ export(Array, NodePath) var back_diagonal = []
 var _circles = 0
 var _crosses = 0
 
-var ui_game_end = preload("res://scenes/ui_game_end.tscn").instance()
+# Nodes
+onready var ui_game_end = preload("res://scenes/ui_game_end.tscn").instance()
 
 # Check all rows, columns and diagonals
 # to determine if someone won
@@ -40,18 +41,20 @@ func check_if_winner() -> bool:
 	or is_first_col or is_second_col or is_third_col \
 	or is_forw_dia or is_back_dia:
 		return true
+	
 	return false
 
 # Called when one of the players won
 func player_won(which_player):
 	var player = ""
 	if which_player == Square.SquareStatus.CIRCLE:
-		player = "Circle"
+		player = "circle"
 	else:
-		player = "Cross"
+		player = "cross"
 	
 	# Prevent other buttons from being pressed
 	GameStatus.is_game_playing = false
+	
 	add_child(ui_game_end)
 
 # Catches signal from a button press

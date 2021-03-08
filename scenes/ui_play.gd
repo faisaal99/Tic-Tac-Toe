@@ -1,6 +1,6 @@
 extends Control
 
-class_name UIGameEnd
+class_name UIPlay
 
 var play_status = GameStatus.is_game_playing
 signal play_enabled
@@ -16,5 +16,5 @@ func _init_new_game():
 	emit_signal("play_enabled")
 
 
-func _animation_finished(anim_name):
+func _animation_finished(_anim_name):
 	self.queue_free()

@@ -22,12 +22,18 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "UIGameEnd",
 "language": "GDScript",
+"path": "res://scenes/ui_game_end.gd"
+}, {
+"base": "Control",
+"class": "UIPlay",
+"language": "GDScript",
 "path": "res://scenes/ui_play.gd"
 } ]
 _global_script_class_icons={
 "PlayLogic": "",
 "Square": "",
-"UIGameEnd": ""
+"UIGameEnd": "",
+"UIPlay": ""
 }
 
 [application]
