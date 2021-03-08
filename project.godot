@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Control",
+"class": "PlayLogic",
+"language": "GDScript",
+"path": "res://scenes/PlayLogic.gd"
+}, {
 "base": "MarginContainer",
 "class": "Square",
 "language": "GDScript",
 "path": "res://logic/square_status.gd"
 } ]
 _global_script_class_icons={
+"PlayLogic": "",
 "Square": ""
 }
 

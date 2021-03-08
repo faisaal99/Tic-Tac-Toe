@@ -11,6 +11,14 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+first_row = [ NodePath("CenterContainer/GridContainer/square1"), NodePath("CenterContainer/GridContainer/square2"), NodePath("CenterContainer/GridContainer/square3") ]
+second_row = [ NodePath("CenterContainer/GridContainer/square4"), NodePath("CenterContainer/GridContainer/square5"), NodePath("CenterContainer/GridContainer/square6") ]
+third_row = [ NodePath("CenterContainer/GridContainer/square7"), NodePath("CenterContainer/GridContainer/square8"), NodePath("CenterContainer/GridContainer/square9") ]
+first_column = [ NodePath("CenterContainer/GridContainer/square1"), NodePath("CenterContainer/GridContainer/square4"), NodePath("CenterContainer/GridContainer/square7") ]
+second_column = [ NodePath("CenterContainer/GridContainer/square2"), NodePath("CenterContainer/GridContainer/square5"), NodePath("CenterContainer/GridContainer/square8") ]
+third_column = [ NodePath("CenterContainer/GridContainer/square3"), NodePath("CenterContainer/GridContainer/square6"), NodePath("CenterContainer/GridContainer/square9") ]
+forw_diagonal = [ NodePath("CenterContainer/GridContainer/square3"), NodePath("CenterContainer/GridContainer/square5"), NodePath("CenterContainer/GridContainer/square7") ]
+back_diagonal = [ NodePath("CenterContainer/GridContainer/square1"), NodePath("CenterContainer/GridContainer/square5"), NodePath("CenterContainer/GridContainer/square9") ]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
