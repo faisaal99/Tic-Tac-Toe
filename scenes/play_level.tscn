@@ -21,9 +21,9 @@ __meta__ = {
 
 [node name="Grid" type="TextureRect" parent="CenterContainer"]
 margin_left = 335.0
-margin_top = 122.0
+margin_top = 123.0
 margin_right = 689.0
-margin_bottom = 476.0
+margin_bottom = 477.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_min_size = Vector2( 354, 354 )
@@ -35,9 +35,9 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 335.0
-margin_top = 122.0
+margin_top = 123.0
 margin_right = 689.0
-margin_bottom = 476.0
+margin_bottom = 477.0
 rect_min_size = Vector2( 354, 354 )
 custom_constants/vseparation = 24
 custom_constants/hseparation = 24
@@ -102,3 +102,18 @@ margin_top = 252.0
 margin_right = 354.0
 margin_bottom = 354.0
 button_id = 9
+
+[node name="Control" type="Control" parent="."]
+margin_left = 165.0
+margin_top = 98.0
+margin_right = 205.0
+margin_bottom = 138.0
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square1" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square2" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square3" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square4" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square5" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square6" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square7" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square8" to="." method="_on_button_pressed"]
+[connection signal="button_pressed" from="CenterContainer/GridContainer/square9" to="." method="_on_button_pressed"]
