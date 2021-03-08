@@ -8,7 +8,7 @@ enum SquareStatus { EMPTY, CIRCLE, CROSS }
 onready var tex = $"tex" as TextureRect
 
 # Props
-signal button_pressed(whichButton, btn)
+signal button_pressed(btn)
 export(int) var button_id = 0
 var fill_status = SquareStatus.EMPTY
 
@@ -24,7 +24,7 @@ func _gui_input(event):
 		var should_emit = change_status()
 		
 		if should_emit:
-			emit_signal("button_pressed", button_id, self)
+			emit_signal("button_pressed", self)
 
 # Return true if it does change
 # Return false if it doesn't change

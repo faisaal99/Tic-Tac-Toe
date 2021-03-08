@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "PlayLogic",
 "language": "GDScript",
-"path": "res://scenes/PlayLogic.gd"
+"path": "res://scenes/play_logic.gd"
 }, {
 "base": "MarginContainer",
 "class": "Square",
 "language": "GDScript",
-"path": "res://logic/square_status.gd"
+"path": "res://logic/square.gd"
 } ]
 _global_script_class_icons={
 "PlayLogic": "",
@@ -32,7 +32,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-CurrentPlayer="*res://logic/CurrentPlayer.gd"
+CurrentPlayer="*res://logic/current_player.gd"
+GameStatus="*res://logic/game_status.gd"
 
 [input]
 
