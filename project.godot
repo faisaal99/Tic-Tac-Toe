@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Square",
 "language": "GDScript",
 "path": "res://logic/square.gd"
+}, {
+"base": "Control",
+"class": "UIGameEnd",
+"language": "GDScript",
+"path": "res://scenes/ui_play.gd"
 } ]
 _global_script_class_icons={
 "PlayLogic": "",
-"Square": ""
+"Square": "",
+"UIGameEnd": ""
 }
 
 [application]

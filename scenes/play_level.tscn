@@ -155,3 +155,4 @@ script = ExtResource( 5 )
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square8" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square9" to="." method="_on_button_pressed"]
 [connection signal="play_enabled" from="UI_Play" to="UI_Play/AnimPlayer" method="_on_UI_Play_play_enabled"]
+[connection signal="animation_finished" from="UI_Play/AnimPlayer" to="UI_Play" method="_animation_finished"]

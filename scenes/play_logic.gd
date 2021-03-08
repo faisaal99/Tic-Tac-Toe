@@ -20,6 +20,8 @@ export(Array, NodePath) var back_diagonal = []
 var _circles = 0
 var _crosses = 0
 
+var ui_game_end = preload("res://scenes/ui_game_end.tscn").instance()
+
 # Check all rows, columns and diagonals
 # to determine if someone won
 func check_if_winner() -> bool:
@@ -50,7 +52,7 @@ func player_won(which_player):
 	
 	# Prevent other buttons from being pressed
 	GameStatus.is_game_playing = false
-	
+	add_child(ui_game_end)
 
 # Catches signal from a button press
 func _on_button_pressed(btn: Square):
