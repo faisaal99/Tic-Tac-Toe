@@ -1,0 +1,187 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+
+[node name="33" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="33" type="TextureRect" parent="33"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="11" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="11" type="TextureRect" parent="11"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="12" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="12" type="TextureRect" parent="12"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="13" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="13" type="TextureRect" parent="13"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="21" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="21" type="TextureRect" parent="21"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="22" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="22" type="TextureRect" parent="22"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="23" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="23" type="TextureRect" parent="23"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="31" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="31" type="TextureRect" parent="31"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
+
+[node name="32" type="MarginContainer" parent="."]
+visible = false
+margin_left = 461.0
+margin_top = 249.0
+margin_right = 563.0
+margin_bottom = 351.0
+rect_min_size = Vector2( 102, 102 )
+custom_constants/margin_right = 6
+custom_constants/margin_top = 6
+custom_constants/margin_left = 6
+custom_constants/margin_bottom = 6
+
+[node name="32" type="TextureRect" parent="32"]
+margin_left = 6.0
+margin_top = 6.0
+margin_right = 96.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 84, 84 )
+stretch_mode = 6
