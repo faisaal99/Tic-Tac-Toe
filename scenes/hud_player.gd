@@ -23,6 +23,6 @@ func _decide_text():
 	else:
 		txt.bbcode_text = _error_text
 
-
+# Catching signal from PlayLevel
 func _on_switch_hud_player():
 	_decide_text()

@@ -62,8 +62,7 @@ func _on_button_pressed(btn: Square):
 	var is_winner = check_if_winner()
 	if is_winner:
 		player_won(btn.fill_status)
-	else:
-		emit_signal("switch_hud_player")
+	emit_signal("switch_hud_player")
 
 # Clear all squares for new game
 func clear_all():

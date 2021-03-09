@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/Pixeled.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/ui_game_end.gd" type="Script" id=2]
+[ext_resource path="res://styles/menu_button_normal_style.tres" type="StyleBox" id=3]
+[ext_resource path="res://styles/menu_button_hover_style.tres" type="StyleBox" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -33,9 +35,9 @@ anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 162.0
-margin_top = 187.0
+margin_top = 188.0
 margin_right = 862.0
-margin_bottom = 412.0
+margin_bottom = 411.0
 custom_constants/separation = 50
 
 [node name="WinMessage" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
@@ -52,8 +54,13 @@ scroll_active = false
 [node name="ReplayButton" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 163.0
 margin_right = 700.0
-margin_bottom = 225.0
+margin_bottom = 223.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "REPLAY"
-flat = true
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ReplayButton" to="." method="_on_replay_pressed"]
