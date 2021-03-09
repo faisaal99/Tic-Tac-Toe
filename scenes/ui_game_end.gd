@@ -13,7 +13,7 @@ var winner: String
 # Signal
 signal on_replay_pressed
 
-func _on_end_game(player):
+func _on_end_game(player: String):
 	winner = player
 	
 	if winner == "circle":
