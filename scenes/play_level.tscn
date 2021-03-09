@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/play_logic.gd" type="Script" id=1]
 [ext_resource path="res://tiktaktoe_grid.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/ui_play.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/animation.gd" type="Script" id=5]
 [ext_resource path="res://scenes/ui_game_end.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/hud_player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_menu"
@@ -206,6 +207,8 @@ margin_right = 354.0
 margin_bottom = 354.0
 button_id = 9
 
+[node name="HUD_Player" parent="." instance=ExtResource( 7 )]
+
 [node name="UI_Play" parent="." instance=ExtResource( 4 )]
 
 [node name="UIGameEnd" parent="." instance=ExtResource( 6 )]
@@ -216,6 +219,7 @@ anims/fade_menu = SubResource( 1 )
 anims/fade_replay_menu = SubResource( 2 )
 script = ExtResource( 5 )
 [connection signal="signal_end_game" from="." to="UIGameEnd" method="_on_end_game"]
+[connection signal="switch_hud_player" from="." to="HUD_Player" method="_on_switch_hud_player"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square1" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square2" to="." method="_on_button_pressed"]
 [connection signal="button_pressed" from="CenterContainer/GridContainer/square3" to="." method="_on_button_pressed"]

@@ -21,6 +21,7 @@ export(Array, NodePath) var back_diagonal = []
 var _circles = 0
 var _crosses = 0
 signal signal_end_game(player)
+signal switch_hud_player()
 
 # Check all rows, columns and diagonals
 # to determine if someone won
@@ -61,6 +62,8 @@ func _on_button_pressed(btn: Square):
 	var is_winner = check_if_winner()
 	if is_winner:
 		player_won(btn.fill_status)
+	else:
+		emit_signal("switch_hud_player")
 
 # Clear all squares for new game
 func clear_all():
